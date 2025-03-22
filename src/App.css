@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: "Playfair Display SC", "serif";
+  --font-josefin: "Josefin Sans", "sans-serif";
+  --shadow-light: 0px 5px 5px rgba(0, 0, 0, 0.51);
+  --shadow-light: 0px 5px 5px rgba(0, 0, 0, 0.51);
+  --shadow-box: 5px 5px 10px rgba(75, 75, 75, 0.549);
+  --shadow-buttonBlack: 1px 2px 5px rgba(0, 0, 0, 0.51),
+    inset 2px 2px 5px hsla(0, 0%, 100%, 0.5);
+  --shadow-buttonWhite: 1px 2px 5px rgba(0, 0, 0, 0.51), inset 2px 1px 2px white;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
