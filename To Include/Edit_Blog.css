@@ -1,227 +1,82 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('A:\Visual Studio Projects\JS\Blog Writer\Noto Sans JP.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-* {
-  padding: 0%;
-  margin: 0%;
-  font-family: "Playfair Display SC", serif;
-  font-size: large;
+*{ 
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    border: none;
+}
+#header {
+    background-color: #4d95e9;
+    padding-left: 8px;
+    color: #d5d1c7;
+    display: flex;
+    width: 100%;
+    height: 20px;
+    box-shadow: inset 0.5px 0.5px 3px rgba(255, 255, 255, 50%);
 }
 
-.buttons {
-  font-family: "Josefin Sans", sans-serif;
-  color: white;
-  border-radius: 7px;
-  background-color: black;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.451);
+.btn_container{
+    display: flex;
+    padding: 10px;
 }
 
-.buttons:active {
-  box-shadow: none;
+.bt{
+    padding-inline: 30px;
+    color: #333;
+    background-color: #d5d1c7;
+    box-shadow: 1px 1px 2px black, -1px -1px 2px white;
+}
+#bt2{
+    position: absolute;
+    right: 0;
+    color: #333;
+    background-color: #d5d1c7;
+    box-shadow: 1px 1px 2px black, -1px -1px 2px white;
 }
 
-body {
-  background-image: url();
-  background-color: #f5f5f5;
-  overflow-x: hidden;
+.dark_mode{
+    background-color: #333;
+    color: #ffff;
 }
 
-.nav_container {
-  display: block;
+.bt:active, #bt2:active {
+    box-shadow: inset 1px 1px 2px black, inset -1px -1px 2px white;
+    background-color: #cac7c0;
 }
 
-nav {
-  display: flex;
-  background-image: url();
-  background-color: #c5c5c5;
-  list-style: none;
-  justify-content: space-evenly;
-  color: rgb(0, 0, 0);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.51);
-}
-/* HEADER */
-header {
-  display: flex;
-  align-items: flex-start;
-  background-image: url(https://images.unsplash.com/photo-1529251333259-d36cccaf22ea?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-size: cover;
-  height: 120px;
-  overflow: hidden;
+.Title {
+    padding: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.header_txt {
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
+#Title {
+    padding: 10px;
+    width: 100%;
+    box-shadow: inset 1px 1px 2px black;
 }
-
-#main_txt {
-  display: flex;
-  font-size: xxx-large;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
-  /* padding-top: 20px;*/
-  padding-left: 10px; 
-}
-
-#subtext {
-  display: flex;
-  font-size: small;
-  color: rgba(255, 255, 255, 0.997);
-  padding-left: 20px;
-}
-
-.col_container {
-  display: flex;
-  width: 50%;
-  height: 120px;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#col1 {
-  background-image: url(https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-}
-
-#col2 {
-  background-image: url(https://images.unsplash.com/photo-1566125882500-87e10f726cdc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-}
-
-#col3 {
-  background-image: url(https://images.unsplash.com/photo-1461773518188-b3e86f98242f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-}
-
-#col1,
-#col2,
-#col3 {
-  width: 180px;
-  background-size: cover;
-  box-shadow: inset -20px 0 0 0 rgba(255, 255, 255, 0.33);
-  transform: skew(-30deg);
-}
-/*///////////////////*/
-
-/* CONTENT */
 
 .content {
-  height: 100vh;
-  width: 100%;
-}
-/* Start */
-.Start_container {
-  display: flex;
-  padding: 10px;
-  width: 100%;
-  justify-content: center;
+    display: flex;
+    padding: 10px;
 }
 
-#Start {
-  padding: 10px;
-  margin-left: 140px;
-  width: 165px;
-}
-/*///////////////////*/
-#Login {
-  padding-inline: 5px;
+#content {
+    width: 100%;
+    height: 100vh;
+    box-shadow: inset 1px 1px 2px black;
+    padding-left: 10px;
+    text-align:top;
 }
 
-#Sign_up {
-  padding-inline: 5px;
-  color: black;
-  background-color: #e2e2e2;
-  border: none;
-  box-shadow: inset 2px 1px 2px white, 1px 2px 5px rgba(0, 0, 0, 0.51);
-}
-
-#Sign_up:active {
-  box-shadow: inset 5px 5px 2px white;
-}
-
-.Search_w_Buttons {
-  padding: 10px;
-  display: flex;
-}
-
-#Login_Signup {
-  display: flex;
-  padding: 10px;
-  gap: 10px;
-  min-width: 200px;
-  align-items: center;
-}
-
-#search_container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  padding: 10px;
-}
-
-#Dark_Mode {
-  align-items: center;
-}
-
-#search {
-  text-align: center;
-  font-size: large;
-  border: none;
-  border-radius: 12px;
-  height: 30px;
-  width: 210px;
-  background-color: white;
-}
-
-.Title_with_Button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.Featured_Title {
-  font-size: xx-large;
-  padding-left: 30px;
-  text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.51);
-}
-
-.Left_Right {
-  justify-content: space-between;
-}
-
-/* FEATURED CONTAINER */
-
-.featured_container {
-  display: flex;
-  padding-top: 30px;
-  padding-left: 20px;
-  width: 100vw;
-  gap: 30px;
-  overflow-x: auto;
-}
-
-#f1 {
-  background-image: url(https://supapjpiqdfzuaordcdx.supabase.co/storage/v1/object/public/images/platformer-featured-alt.png);
-  background-size: cover;
-}
-
-#description {
-  height: 50%;
-  width: 100%;
-  background-color: aqua;
-}
-
-.featured {
-  flex-shrink: 0;
-  height: 392px;
-  width: 390px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 2%;
-  box-shadow: 5px 5px 10px rgba(75, 75, 75, 0.549);
-}
-
-.featured:hover {
-  transform: scale(1);
-}
-/*///////////////////*/
-#Newsletter {
-  justify-content: right;
-  align-items: right;
+body{
+    background-color: #c2d8ff;
 }
