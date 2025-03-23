@@ -50,6 +50,7 @@ const App = () => {
       </div>
       <div className="flex p-[10px] w-full justify-center">
         <ButtonBlack
+          onClick={() => (window.location.href = "/pages/Edit_Blog.htm")}
           Label="Start Blogging"
           className="items-center flex justify-evenly p-[10px] w-[165px] ml-43"
           child={
