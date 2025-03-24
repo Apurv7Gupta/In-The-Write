@@ -41,7 +41,7 @@ const App = () => {
           <Searchbox />
         </div>
         <div className="items-center">
-          <Darkmode
+          <ButtonBlack //Replace with DarkMode Button
             className="size-10"
             child={
               <img src="https://cdn-icons-png.flaticon.com/128/8215/8215216.png" />

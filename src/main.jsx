@@ -14,6 +14,10 @@ const router = createBrowserRouter(
       element: <App />,
     },
     {
+      path: "/Home",
+      element: <App />,
+    },
+    {
       path: "*", // Catch-all route for 404
       element: <div>404: Page Not Found</div>,
     },
