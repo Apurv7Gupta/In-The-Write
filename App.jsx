@@ -6,6 +6,7 @@ import LoginImage from "./src/assets/login.png";
 import StartBlogging from "./src/assets/StartBlogging.png";
 import Featured from "./src/components/Featured";
 import Darkmode from "./src/components/Darkmode";
+import { Link } from "react-router-dom";
 
 const App = () => {
   return (
@@ -49,16 +50,17 @@ const App = () => {
         </div>
       </div>
       <div className="flex p-[10px] w-full justify-center">
-        <ButtonBlack
-          onClick={() => (window.location.href = "/pages/Edit_Blog.htm")}
-          Label="Start Blogging"
-          className="items-center flex justify-evenly p-[10px] w-[165px] ml-43"
-          child={
-            <div className="size-6.5">
-              <img src={StartBlogging} />
-            </div>
-          }
-        />
+        <Link to="/StartBlogging">
+          <ButtonBlack
+            Label="Start Blogging"
+            className="items-center flex justify-evenly p-[10px] w-[165px] ml-43"
+            child={
+              <div className="size-6.5">
+                <img src={StartBlogging} />
+              </div>
+            }
+          />
+        </Link>
       </div>
       <div>
         <p className="flex font-playfair text-4xl pl-[20px] text-shadow">

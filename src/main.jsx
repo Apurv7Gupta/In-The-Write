@@ -4,18 +4,31 @@ import "./App.css";
 import "./components/Navbar";
 import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import Edit from "./components/Edit_blogHTM";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "*", // Catch-all route for 404
+      element: <div>404: Page Not Found</div>,
+    },
+    {
+      path: "/StartBlogging",
+      element: <Edit />,
+    },
+  ],
   {
-    path: "/Home",
-    element: <App />,
-  },
-
-  { path: "/Start Blogging", element: "" },
-]);
+    basename: "/In-The-Write",
+  }
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>
 );
