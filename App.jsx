@@ -15,7 +15,7 @@ const App = () => {
       <div className="block">
         <Navbar />
       </div>
-      <div className="flex p-[10px]">
+      <div className="relative flex px-[10px] py-[10px] pt-[35px]">
         <div className="p-[10px] flex gap-[30px] items-center">
           <ButtonBlack
             onClick={() => console.error("Button clicked!")}
