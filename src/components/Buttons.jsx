@@ -6,9 +6,12 @@ const ButtonBlack = ({
   Path = "",
   onClick = () => {},
 }) => {
+  const DarkClasses =
+    "dark:bg-[#e2e2e2] dark:shadow-buttonWhite dark:text-black dark:active:shadow-buttonWhiteActive dark:hover:bg-gray-100";
+
   return (
     <button
-      className={`px-[5px] font-josefin text-white rounded-[7px] bg-black shadow-buttonBlack active:shadow-none dark:bg-[#e2e2e2] dark:shadow-buttonWhiteDark dark:text-black dark:active:shadow-none ${className}`}
+      className={`px-[5px] font-josefin text-white rounded-[7px] bg-black shadow-buttonBlack active:shadow-buttonBlackActive ${DarkClasses}  ${className}`}
       onClick={onClick}
     >
       <Link to={`${Path}`}>{Label} </Link> <Link to={`${Path}`}>{child}</Link>
@@ -24,9 +27,11 @@ const ButtonWhite = ({
   child = <></>,
   onClick = () => {},
 }) => {
+  const DarkClasses =
+    "dark:text-white dark:shadow-buttonBlackdark {<---how is this working???} dark:bg-black";
   return (
     <button
-      className={`px-[5px] font-josefin text-black rounded-[7px] bg-[#e2e2e2] border-none shadow-buttonWhite active:shadow-none dark:text-white dark:shadow-buttonBlackDark dark:bg-black ${className}`}
+      className={`px-[5px] font-josefin text-black rounded-[7px] bg-[#e2e2e2] border-none shadow-buttonWhite active:shadow-buttonWhiteActive hover:bg-gray-100  ${DarkClasses} ${className}`}
       onClick={onClick}
     >
       {Label} {child}

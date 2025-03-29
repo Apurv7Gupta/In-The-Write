@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ButtonBlack } from "./Buttons";
 
-const App = () => {
+const Darkmode = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Check for the user's theme preference from localStorage on component mount
@@ -21,14 +21,16 @@ const App = () => {
     localStorage.setItem("theme", newTheme); // Store the theme preference in localStorage
   };
 
+  const DarkClasses =
+    "dark:bg-[url(https://cdn-icons-png.flaticon.com/128/869/869869.png)] dark:bg-blend-multiply dark:bg-cover";
   return (
     <ButtonBlack
       onClick={toggleTheme}
-      className="size-10 bg-[url(https://cdn-icons-png.flaticon.com/128/8215/8215216.png)] bg-cover dark:bg-[url(https://cdn-icons-png.flaticon.com/128/869/869869.png)] dark:bg-blend-multiply dark:bg-cover"
+      className={`size-10 bg-[url(https://cdn-icons-png.flaticon.com/128/8215/8215216.png)] bg-cover ${DarkClasses}`}
     >
       Toggle Dark Mode
     </ButtonBlack>
   );
 };
 
-export default App;
+export default Darkmode;

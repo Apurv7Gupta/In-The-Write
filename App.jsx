@@ -6,8 +6,12 @@ import LoginImage from "./src/assets/login.png";
 import StartBlogging from "./src/assets/StartBlogging.png";
 import Featured from "./src/components/Featured";
 import Darkmode from "./src/components/Darkmode";
+import { useState } from "react";
 
 const App = () => {
+  const [isDark, setIsDark] = useState(
+    document.documentElement.classList.contains("dark")
+  );
   return (
     <>
       <Header />
@@ -22,7 +26,13 @@ const App = () => {
             className="items-center flex w-20 justify-between"
             child={
               <div className="size-5">
-                <img src={LoginImage} />
+                <img
+                  src={
+                    isDark
+                      ? "https://cdn-icons-png.flaticon.com/128/1000/1000997.png"
+                      : LoginImage
+                  }
+                />
               </div>
             }
           />
@@ -31,7 +41,13 @@ const App = () => {
             className="items-center flex w-22 justify-between"
             child={
               <div className="size-5">
-                <img src="https://cdn-icons-png.flaticon.com/128/748/748137.png" />
+                <img
+                  src={
+                    isDark
+                      ? "https://cdn-icons-png.flaticon.com/128/9293/9293643.png"
+                      : "https://cdn-icons-png.flaticon.com/512/9333/9333864.png"
+                  }
+                />
               </div>
             }
           />
@@ -56,7 +72,7 @@ const App = () => {
         />
       </div>
       <div>
-        <p className="flex font-playfair text-2xl lg:text-4xl pl-[20px] text-shadow">
+        <p className="flex font-playfair text-2xl lg:text-4xl pl-[20px] text-shadow dark:text-white">
           FEATURED
         </p>
         <div>

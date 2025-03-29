@@ -12,14 +12,16 @@
 
   --shadow-buttonBlack: 1px 2px 5px rgba(0, 0, 0, 0.51),
     inset 2px 2px 5px hsla(0, 0%, 100%, 0.5);
-  --shadow-buttonBlackDark: 1px 2px 5px rgba(0, 0, 0, 0.51),
-    inset 2px 2px 5px hsla(0, 0%, 100%, 0.5);
+  --shadow-buttonBlackActive: inset 1px 1px 2px white, inset -1px -1px 2px black;
 
   --shadow-buttonWhite: 1px 2px 5px rgba(0, 0, 0, 0.51), inset 2px 1px 2px white;
-  --shadow-buttonWhiteDark: 1px 2px 5px rgba(0, 0, 0, 0.51),
-    inset 2px 1px 2px black;
+  --shadow-buttonWhiteActive: inset 1px 1px 2px black, inset -1px -1px 2px white;
 }
 
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadowDark {
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }

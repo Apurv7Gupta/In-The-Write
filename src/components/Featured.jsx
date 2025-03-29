@@ -10,7 +10,7 @@ const Featured = () => {
         {blogData.map((blog, index) => (
           <div
             key={index}
-            className="shrink-0 h-[392px] w-[390px] bg-white dark:bg-cyan-700 rounded-3xl shadow-box snap-start"
+            className="shrink-0 h-[392px] w-[390px] bg-white dark:bg-black rounded-3xl shadow-box snap-start"
           >
             <div
               className="rounded-t-3xl h-[50%] w-full bg-cover bg-no-repeat"
