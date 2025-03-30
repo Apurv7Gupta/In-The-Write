@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Darkmode from "../components/Darkmode";
 
 const Edit = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -13,10 +14,7 @@ const Edit = () => {
 
   return (
     <>
-      <link
-        rel="stylesheet"
-        href={`${import.meta.env.BASE_URL}CSS/Edit_Blog.css`}
-      />
+      <link rel="stylesheet" href={`CSS/Edit_Blog.css`} />
       <div className={`edit-blog ${darkMode ? "dark-mode" : ""}`}>
         <header id="header">Compose Blog</header>
 

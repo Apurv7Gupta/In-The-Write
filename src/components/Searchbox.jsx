@@ -1,7 +1,7 @@
-const Searchbox = ({ image }) => {
+const Searchbox = () => {
   return (
     <>
-      <div className=" flex items-center">
+      <div className="flex items-center">
         <img
           className="relative left-7 size-3.5 lg:size-5.5"
           src="https://cdn-icons-png.flaticon.com/128/2676/2676824.png"
