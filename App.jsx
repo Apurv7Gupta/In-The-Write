@@ -24,27 +24,48 @@ const Application = () => {
             Label="Login"
             className="items-center flex w-20 justify-between"
           >
-            <div className="size-5">
+            <div className="size-5 relative">
+              {/* Dark Mode Image */}
               <img
-                src={
-                  isDarkMode
-                    ? "https://cdn-icons-png.flaticon.com/128/1000/1000997.png"
-                    : LoginImage
-                }
+                src="https://cdn-icons-png.flaticon.com/128/1000/1000997.png"
+                alt="Login"
+                className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                  isDarkMode ? "opacity-100" : "opacity-0"
+                }`}
+              />
+
+              {/* Light Mode Image */}
+              <img
+                src={LoginImage}
+                alt="Login"
+                className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                  isDarkMode ? "opacity-0" : "opacity-100"
+                }`}
               />
             </div>
           </ButtonBlack>
+
           <ButtonWhite
             Label="SignUp"
             className="items-center flex w-22 justify-between"
           >
-            <div className="size-5">
+            <div className="size-5 relative">
+              {/* Dark Mode Image */}
               <img
-                src={
-                  isDarkMode
-                    ? "https://cdn-icons-png.flaticon.com/128/9293/9293643.png"
-                    : "https://cdn-icons-png.flaticon.com/512/9333/9333864.png"
-                }
+                src="https://img.icons8.com/?size=80&id=W28azECz06zJ&format=png"
+                alt="Sign Up"
+                className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                  isDarkMode ? "opacity-100" : "opacity-0"
+                }`}
+              />
+
+              {/* Light Mode Image */}
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/9293/9293643.png"
+                alt="Sign Up"
+                className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                  isDarkMode ? "opacity-0" : "opacity-100"
+                }`}
               />
             </div>
           </ButtonWhite>

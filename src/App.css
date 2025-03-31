@@ -16,6 +16,7 @@
 
   --shadow-buttonWhite: 1px 2px 5px rgba(0, 0, 0, 0.51), inset 2px 1px 2px white;
   --shadow-buttonWhiteActive: inset 1px 1px 2px black, inset -1px -1px 2px white;
+  --shadow-skewedGlass: inset -20px 0 0 0 rgba(255, 255, 255, 0.33);
 }
 
 .text-shadow {
