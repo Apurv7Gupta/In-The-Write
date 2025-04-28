@@ -15,3 +15,4 @@
 ## Work In Progress
 - 📱 Mobile Device Functionality
 - ✍️ Improving the Blogging Interface
+- 🔐 Adding OAuth functinality
