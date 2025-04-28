@@ -1,8 +1,19 @@
-# React + Vite
+# In The Write
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A blogging website** that allows you to write, share, and save blogs directly to your device.
 
-Currently, two official plugins are available:
+## Features
+- 🌙 **Dark Mode**
+- 🖼️ **Randomly Updated Blog Gallery**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- ⚛️ **React**
+- 🎨 **TailwindCSS**
+- 🔄 **ContextAPI**
+- 📸 **Lorem PicsumAPI**
+
+## Work In Progress
+- 📱 Mobile Device Functionality
+- ✍️ Improving the Blogging Interface
+- 🔐 Adding OAuth functinality
+- 🔧 Fixing NotFound component functionality
