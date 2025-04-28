@@ -16,4 +16,3 @@
 - 📱 Mobile Device Functionality
 - ✍️ Improving the Blogging Interface
 - 🔐 Adding OAuth functinality
-- 🔧 Fixing NotFound component functionality
