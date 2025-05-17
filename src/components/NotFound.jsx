@@ -1,11 +1,8 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
 import { ButtonWhite } from "./Buttons";
 import Darkmode from "./Darkmode";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
-  const navigate = useNavigate();
   const DarkClasses =
     "dark:hover:bg-blend-hard-light transition-colors duration-300";
   return (
@@ -21,13 +18,12 @@ const NotFound = () => {
         <p className="mt-4 text-black text-2xl md:text-4xl lg:text-5xl font-playfair text-shadow dark:text-gray-300">
           Page Not Found
         </p>
-        <Link to="/Home">
-          <ButtonWhite
-            Label="Return Home"
-            className={`mt-6 w-full max-w-xs md:max-w-md lg:max-w-lg px-6 py-3 
+        <ButtonWhite
+          Path={"/Home"}
+          Label="Return Home"
+          className={`mt-6 w-full max-w-xs md:max-w-md lg:max-w-lg px-6 py-3 
               text-lg md:text-xl lg:text-2xl font-playfair ${DarkClasses}`}
-          />
-        </Link>
+        />
       </div>
     </div>
   );

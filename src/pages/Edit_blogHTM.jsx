@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { ButtonWhite, ButtonBlack } from "../components/Buttons";
 import Darkmode from "../components/Darkmode";
@@ -37,12 +38,14 @@ const Edit = () => {
       <div className="bg-[#2f2d2d29] font-NotoSansJP">
         <header className="flex items-center w-full h-[30px] bg-black pl-[8px] text-[#d5d1c7]">
           Compose Blog
+          <div className="px-[20px]">
+            <ButtonBlack Path={"/Home"}>Return Home</ButtonBlack>
+          </div>
         </header>
         <div className="flex p-[10px] justify-between">
           <ButtonWhite onClick={handleSave}>Save</ButtonWhite>
           <Darkmode onClick={toggleTheme}></Darkmode>
         </div>
-
         {/* Title */}
         <div className="flex p-[10px] pl-[10px] items-center dark:text-white">
           <p className="pr-5">Title</p>
@@ -54,7 +57,6 @@ const Edit = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-
         {/* Content */}
         <div className="flex-col p-[10px] dark:text-white">
           <div className="pb-5">Content</div>

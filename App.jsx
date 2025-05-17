@@ -7,7 +7,6 @@ import StartBlogging from "./src/assets/StartBlogging.png";
 import Featured from "./src/components/Featured";
 import Darkmode from "./src/components/Darkmode";
 import { useTheme } from "./src/context/ThemeContext";
-import { ThemeProvider } from "./src/context/ThemeContext";
 
 const App = () => {
   const { isDarkMode } = useTheme();
