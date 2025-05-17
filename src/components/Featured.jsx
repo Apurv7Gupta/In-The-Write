@@ -6,7 +6,7 @@ const Featured = () => {
   return (
     <>
       {/* Container */}
-      <div className="flex pt-[30px] pl-[20px] w-full gap-[30px] overflow-x-auto scroll-smooth snap-x">
+      <div className="min-w-[100px] flex pt-[30px] pl-[20px] w-full gap-[30px] overflow-x-auto scroll-smooth snap-x">
         {blogData.map((blog, index) => (
           <div
             key={index}

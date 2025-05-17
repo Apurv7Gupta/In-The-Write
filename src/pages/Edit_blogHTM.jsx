@@ -1,12 +1,35 @@
+import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { ButtonWhite, ButtonBlack } from "../components/Buttons";
 import Darkmode from "../components/Darkmode";
 
 const Edit = () => {
   const { isDarkMode, toggleTheme } = useTheme();
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
-  const handleSave = () => {
-    alert("Blog saved!");
+  const handleSave = async () => {
+    const blogData = {
+      title: title,
+      content: content,
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/save", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(blogData),
+      });
+
+      if (!response.ok) throw new Error("Failed to save blog");
+
+      alert("Blog saved!");
+    } catch (err) {
+      console.error("Save error:", err);
+      alert("Error saving blog");
+    }
   };
 
   return (
@@ -27,6 +50,8 @@ const Edit = () => {
             type="text"
             className="p-[10px] w-full shadow-[inset 1px 1px 2px black] bg-[#2f2d2d29] dark:bg-black"
             placeholder="Enter blog title..."
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </div>
 
@@ -36,6 +61,8 @@ const Edit = () => {
           <textarea
             placeholder="Start Writing..."
             className="w-full h-[100vh] shadow-[inset 1px 1px 2px black] pl-[10px] align-top bg-[#2f2d2d29] dark:bg-black"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
           ></textarea>
         </div>
       </div>
