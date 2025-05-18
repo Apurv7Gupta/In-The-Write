@@ -1,6 +1,6 @@
 # In The Write
 
-**A blogging website** that allows you to write, share, and save blogs directly to your device.
+**A blogging website**: Just write your thougts in the content section, along with the title and watch it displayed in the Featured section on the homepage
 
 ## Features
 - 🌙 **Dark Mode**
@@ -11,8 +11,9 @@
 - 🎨 **TailwindCSS**
 - 🔄 **ContextAPI**
 - 📸 **Lorem PicsumAPI**
+- 🍃**MongoDB**
+- 🔌**Express**
 
 ## Work In Progress
-- 📱 Mobile Device Functionality
 - ✍️ Improving the Blogging Interface
 - 🔐 Adding OAuth functinality
