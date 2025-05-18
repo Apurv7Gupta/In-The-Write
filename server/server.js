@@ -6,9 +6,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//env setup
+require("dotenv").config();
+
+const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_CLUSTER}/In-The-WriteDB?retryWrites=true&w=majority`;
 // MongoDB setup
 mongoose
-  .connect("mongodb://localhost:27017/In-The-WriteDB")
+  .connect(uri)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error(err));
 
