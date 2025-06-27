@@ -1,6 +1,5 @@
 import { ButtonWhite } from "./Buttons";
 import Darkmode from "./Darkmode";
-import { Link } from "react-router-dom";
 
 const NotFound = () => {
   const DarkClasses =

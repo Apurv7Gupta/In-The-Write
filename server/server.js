@@ -8,6 +8,7 @@ app.use(
     origin: "https://apurv7gupta.github.io/In-The-Write/",
   })
 );
+
 app.use(express.json());
 
 //env setup
@@ -36,4 +37,4 @@ app.post("/save", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(5000, () => console.log(`Server running on ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
