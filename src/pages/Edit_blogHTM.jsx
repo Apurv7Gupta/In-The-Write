@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { ButtonWhite, ButtonBlack } from "../components/Buttons";
 import Darkmode from "../components/Darkmode";
@@ -16,7 +15,7 @@ const Edit = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/save", {
+      const response = await fetch("https://in-the-write.onrender.com/save", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

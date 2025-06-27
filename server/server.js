@@ -3,7 +3,11 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://apurv7gupta.github.io/In-The-Write/",
+  })
+);
 app.use(express.json());
 
 //env setup
@@ -31,4 +35,5 @@ app.post("/save", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Server running on http://localhost:5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(5000, () => console.log(`Server running on ${PORT}`));
